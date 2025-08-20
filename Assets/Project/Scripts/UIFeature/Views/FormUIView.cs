@@ -7,12 +7,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Assets.Project.Scripts.UIFeature.Handlers
+namespace Assets.Project.Scripts.UIFeature.Views
 {
     public class FormUIView : MonoBehaviour
     {
         [SerializeField] private Button _submitButton;
-        [SerializeField] private GameObject _listWindow;
+        [SerializeField] private ListUIView _listWindow;
 
         [Header("Form's Elements")]
         [SerializeField] private TMP_InputField _organizationNameInput;
@@ -103,9 +103,9 @@ namespace Assets.Project.Scripts.UIFeature.Handlers
             _countryMessageText.gameObject.SetActive(status);
         }
 
-        public void ToggleListWindow()
+        public void EnableListWindow()
         {
-            _listWindow.SetActive(true);
+            _listWindow.EnableWindow(gameObject);
             gameObject.SetActive(false);
         }
     }

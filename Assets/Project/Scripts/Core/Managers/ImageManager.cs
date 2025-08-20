@@ -22,7 +22,7 @@ namespace Assets.Project.Scripts.Core.Managers
             return sprite;
         }
 
-        public async Task<Sprite> LoadImageFronProject(string imageName)
+        public async Task<Sprite> LoadImageFromProject(string imageName)
         {
             string path = Path.Combine(Application.persistentDataPath, imageName);
             var sprite = await LoadImage(path);

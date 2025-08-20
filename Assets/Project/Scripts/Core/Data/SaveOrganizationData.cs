@@ -1,6 +1,5 @@
 using Assets.Project.Scripts.Core.Interfaces;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Assets.Project.Scripts.Core.Data
 {
@@ -10,11 +9,12 @@ namespace Assets.Project.Scripts.Core.Data
 
         private OrganizationListData _organizationListData = new();
 
-        private ISaveManager _saveManager;
+        private readonly ISaveManager _saveManager;
 
         public SaveOrganizationData(ISaveManager saveManager)
         {
             _saveManager = saveManager;
+            LoadOrganizationListData();
         }
 
         public void SaveOrganizationListData(OrganizationData organizationData)

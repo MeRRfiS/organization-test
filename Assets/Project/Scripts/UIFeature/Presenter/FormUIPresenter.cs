@@ -1,7 +1,7 @@
 using Assets.Project.Scripts.Core;
-using Assets.Project.Scripts.UIFeature.Handlers;
 using Assets.Project.Scripts.UIFeature.Interface;
 using Assets.Project.Scripts.UIFeature.Models;
+using Assets.Project.Scripts.UIFeature.Views;
 
 namespace Assets.Project.Scripts.UIFeature.Presenter
 {
@@ -69,7 +69,7 @@ namespace Assets.Project.Scripts.UIFeature.Presenter
             var isAcademy = _view.IsAcademyToggleOn;
             _service.SaveForm(countryValue, organizationName, isAcademy);
 
-            _view.ToggleListWindow();
+            _view.EnableListWindow();
         }
     }
 }

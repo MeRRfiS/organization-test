@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28365b9a128d2cd4b90d37e2a0db47d3, type: 3}
+  m_Name: CountryConfig
+  m_EditorClassIdentifier: 
+  <Models>k__BackingField:
+  - Id: 1
+    Flag: {fileID: -6915422864844671306, guid: 5b6141692d7555543a9440b511ae3837, type: 3}
+    Name: Ukraine
+  - Id: 2
+    Flag: {fileID: -3420012292497237727, guid: c7fb5ac8b8df75347a7080b4143152e8, type: 3}
+    Name: Poland
+  - Id: 3
+    Flag: {fileID: 7141822778105968951, guid: d3ea2f7a58c7ba742a2a6714afab0bad, type: 3}
+    Name: Germany
+  - Id: 4
+    Flag: {fileID: 7677905035433403721, guid: 17285978b2e39124e923e6e39b3469eb, type: 3}
+    Name: France
+  - Id: 5
+    Flag: {fileID: -3867892729803271460, guid: 870abfab3d4cda24b9e926b6cc6d9954, type: 3}
+    Name: Great Britain
