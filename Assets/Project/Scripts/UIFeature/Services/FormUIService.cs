@@ -1,3 +1,4 @@
+using Assets.Project.Scripts.Core.Data;
 using Assets.Project.Scripts.Core.Interfaces;
 using Assets.Project.Scripts.UIFeature.Interface;
 using Assets.Project.Scripts.UIFeature.Models;
@@ -11,6 +12,7 @@ namespace Assets.Project.Scripts.UIFeature.Services
     public class FormUIService: IFormUIService
     {
         [Inject] private IImageManager _imageManager;
+        [Inject] private SaveOrganizationData _saveOrganization;
 
         public bool IsCountrySelected(OrganizationFormModel model, int value)
         {
@@ -39,6 +41,22 @@ namespace Assets.Project.Scripts.UIFeature.Services
             }
 
             return sprite;
+        }
+
+        public void SaveForm(int countryValue, string name, bool isAcademy)
+        {
+            string logoFileName = $"{name}_logo.png";
+            _imageManager.SaveImageToProject(logoFileName);
+
+            OrganizationData data = new OrganizationData
+            {
+                LogoImageName = logoFileName,
+                CountryId = countryValue,
+                OrganizationName = name,
+                IsAcademy = isAcademy
+            };
+
+            _saveOrganization.SaveOrganizationListData(data);
         }
     }
 }

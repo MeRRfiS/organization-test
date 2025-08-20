@@ -17,6 +17,7 @@ namespace Assets.Project.Scripts.UIFeature.Handlers
         [Header("Form's Elements")]
         [SerializeField] private TMP_InputField _organizationNameInput;
         [SerializeField] private TMP_Dropdown _countryDropdown;
+        [SerializeField] private Toggle _academyToggle;
         [SerializeField] private TMP_Text _nameMessageText;
         [SerializeField] private TMP_Text _countryMessageText;
 
@@ -35,6 +36,10 @@ namespace Assets.Project.Scripts.UIFeature.Handlers
         public event Action OnSubmitButtonClick;
         public event Action<int> OnCountryDropdownValueChanged;
         public event Action<string> OnInputValueChanged;
+
+        public bool IsAcademyToggleOn => _academyToggle.isOn;
+        public int CountryDropdownValue => _countryDropdown.value;
+        public string OrganizationName => _organizationNameInput.text;
 
         private void Awake()
         {

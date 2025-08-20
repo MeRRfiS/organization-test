@@ -62,8 +62,14 @@ namespace Assets.Project.Scripts.UIFeature.Presenter
 
         private void OnSubmitButtonClick()
         {
-            if (_model.IsFormValid())
-                _view.ToggleListWindow();
+            if (!_model.IsFormValid()) return;
+
+            var countryValue = _view.CountryDropdownValue;
+            var organizationName = _view.OrganizationName;
+            var isAcademy = _view.IsAcademyToggleOn;
+            _service.SaveForm(countryValue, organizationName, isAcademy);
+
+            _view.ToggleListWindow();
         }
     }
 }

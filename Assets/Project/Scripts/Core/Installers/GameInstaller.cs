@@ -9,11 +9,17 @@ namespace Assets.Project.Scripts.Core.Installers
         public override void InstallBindings()
         {
             BindImageManager();
+            BindSaveManager();
         }
 
         private void BindImageManager()
         {
             Container.Bind<IImageManager>().To<ImageManager>().AsSingle();
+        }
+
+        private void BindSaveManager()
+        {
+            Container.Bind<ISaveManager>().To<SaveManager>().AsSingle();
         }
     }
 }
